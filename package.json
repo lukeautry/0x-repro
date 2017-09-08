@@ -1,0 +1,20 @@
+{
+  "name": "0x-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "testrpc": "sh ./init-testrpc.sh && testrpc --networkId 50 -p 8545 --db 0x_testrpc_snapshot -m \"concert load couple harbor equip island argue ramp clarify fence smart topic\"",
+    "start": "npm run copy:index && webpack-dev-server",
+    "copy:index": "copyfiles -f ./src/index.html dist"
+  },
+  "dependencies": {
+    "0x.js": "^0.14.2",
+    "copyfiles": "^1.2.0",
+    "ethereumjs-testrpc": "^4.1.1",
+    "ts-loader": "^2.3.6",
+    "typescript": "^2.5.2",
+    "web3": "0.2.0",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
